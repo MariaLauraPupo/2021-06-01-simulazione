@@ -17,8 +17,7 @@ import it.polito.tdp.genes.db.GenesDao;
 public class Model {
 	private SimpleWeightedGraph<Genes, DefaultWeightedEdge> grafo;
 	private GenesDao dao;
-	private Map<String,Genes> idMap;
-	
+	private Map<String,Genes> idMap;	
 	
 	public Model() {
 		this.dao = new GenesDao();
@@ -42,6 +41,7 @@ public class Model {
 				}else if(a.getG1().getChromosome() == a.getG2().getChromosome()) {
 
 					Graphs.addEdgeWithVertices(grafo, a.getG1(), a.getG2(), ((double) 2)*a.getPeso());
+					
 				}
 			}
 		}
